@@ -9,13 +9,13 @@
         PROXY_CRED = credentials('PROXY_CREDENTIALS')
     }
 
-	post {
-		unsuccessful {
-			mail to: 'igor.santos@philips.com',
-			subject: "Completed Pipeline: ${currentBuild.fullDisplayName}",
-			body: "The TIE build was completed with errors, please check: ${env.BUILD_URL}"
-		}
-	}    
+//	post {
+//		unsuccessful {
+//			mail to: 'igor.santos@philips.com',
+//			subject: "Completed Pipeline: ${currentBuild.fullDisplayName}",
+//			body: "The TIE build was completed with errors, please check: ${env.BUILD_URL}"
+//		}
+//	}    
 
     stages {
     	stage ("Checkout Calculator"){
